@@ -53,4 +53,40 @@ Languages detected in the repository: JavaScript, EJS, CSS. :contentReference[oa
 - Any cloud provider credentials required by `cloudConfig.js` (see notes below). :contentReference[oaicite:3]{index=3}
 
 
+-------------
+## Setup and Run (Local)
+
+Follow these steps to set up and run the project on your local machine:
+
+---
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yahhshika/OnlineTravelPlatform.git
+cd OnlineTravelPlatform
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Create Environment Variables
+```bash
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+CLOUD_NAME=your_cloud_name
+CLOUD_API_KEY=your_api_key
+CLOUD_API_SECRET=your_api_secret
+SESSION_SECRET=your_session_secret
+```
+
+### 4. Run the application
+
+npm start
+
+
+
+
+
 
