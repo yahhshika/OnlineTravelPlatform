@@ -23,26 +23,24 @@ This README documents how to set up and run the project locally, explains the fo
 - CSS for styling  
 - JavaScript for backend logic and frontend interactions
 
-Languages detected in the repository: JavaScript, EJS, CSS. :contentReference[oaicite:1]{index=1}
+Languages detected in the repository: JavaScript, EJS, CSS.
 
 ---
 
 ## Repository structure (top-level)
-├── controllers/ # route controllers
-├── init/ # initialization scripts or seeders (if any)
-├── models/ # Mongoose schemas/models
-├── public/ # static assets (css, js, images)
-├── routes/ # Express route definitions
-├── utils/ # utility modules/helpers
-├── views/ # EJS templates
-├── LisintingSchema.js # listing schema file (additional schema)
-├── app.js # application entrypoint
-├── cloudConfig.js # cloud / storage configuration
-├── package.json # project dependencies & scripts
-└── .gitignore
+├── controllers/ # route controllers <br/>
+├── init/ # initialization scripts or seeders (if any) <br/>
+├── models/ # Mongoose schemas/models <br/>
+├── public/ # static assets (css, js, images) <br/>
+├── routes/ # Express route definitions <br/>
+├── utils/ # utility modules/helpers <br/>
+├── views/ # EJS templates <br/>
+├── LisintingSchema.js # listing schema file (additional schema) <br/>
+├── app.js # application entrypoint <br/>
+├── cloudConfig.js # cloud / storage configuration <br/>
+├── package.json # project dependencies & scripts <br/>
+└── .gitignore <br/>
 
-
-(You can inspect the repository root and top-level file list on GitHub.) :contentReference[oaicite:2]{index=2}
 
 ---
 
