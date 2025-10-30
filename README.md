@@ -23,7 +23,7 @@ This README documents how to set up and run the project locally, explains the fo
 - CSS for styling  
 - JavaScript for backend logic and frontend interactions
 
-Languages detected in the repository: JavaScript, EJS, CSS.
+
 
 ---
 
