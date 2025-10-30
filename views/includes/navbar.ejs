@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-expand-md bg-body-light sticky-top border-bottom sora">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="nav-link me-3"href="/listing">Explore</a>
+        
+    </div> 
+    
+
+    <div class="ps-5">
+      <form class="d-flex" role="search" action="/listing/keyword" method="get">
+        <input class="form-control me-2 navSearchIP text-center" name="keyword" type="search" placeholder="Search Destination" aria-label="Search"/>
+        <button class="btn btn-danger navbarsearch text-center" type="submit">Search</button>
+      </form>
+    </div>
+    
+    <div class="collapse navbar-collapse ms-auto" style="width: fit-content; flex-direction: row-reverse;" id="navbarNav">
+      <%if(!currUser){%>
+        <a class="nav-link me-3" href="/login"><b>LogIn</b></a>
+        <a class="nav-link me-3" href="/signup"><b>SignUp</b></a>
+        
+        <%}%>
+        <% if(currUser) {%>
+          <a class="nav-link me-3" href="/logout"><b>LogOut</b></a>
+          
+          <%}%>
+          <a class="nav-link me-3" href="/listing/new" >Add your site</a>
+          
+     </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        
+     
+  </div>
+</nav>

@@ -1,0 +1,108 @@
+<% layout("layouts/boilerplate.ejs")%>
+    
+<body>
+
+    <div class="options row mt-3">
+
+        <div class="icons col-8 d-flex wrap">
+            <a href="/listing?filter=Trending" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-fire"></i>
+
+                </div>
+                <p class="icon-text text-center">
+
+                    Trending
+                </p>
+            </a>
+            <a href="/listing?filter=Rooms" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-bed"></i>
+
+                </div>
+                <p class="icon-text text-center">
+                    Rooms
+                </p>
+            </a>
+            <a href="/listing?filter=IconicCity" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-mountain-city"></i>
+
+                </div>
+                <p class="icon-text text-center">
+
+                    Iconic Cities 
+                </p>
+            </a>
+            <a href="/listing?filter=Camping" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-campground"></i>
+                    
+                </div>
+                <p class="icon-text text-center">
+                    
+                    Camping
+                </p>
+            </a>
+            <a href="/listing?filter=Farms" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-cow"></i>
+                    
+                </div>
+                <p class="icon-text text-center">
+                    
+                    Farms
+                </p>
+            </a>
+            
+            <a href="/listing?filter=AmazingPools" class="iconcontain fit-content-w">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-person-swimming"></i>
+
+                </div>
+                <p class="icon-text text-center">
+
+                    Amazing Pools
+                </p>
+            </a>
+        </div>
+        <div class="taxtoggle col-4 d-flex align-items-center justify-content-end">
+            <div class="outertoggler">
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                    <label class="form-check-label" for="checkNativeSwitch">
+                        Show Taxes
+                    </label>
+                </div>
+            </div>
+        
+
+        
+        </div>
+        
+    </div>
+    <div class="row row-cols-1 mt-5 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+
+
+
+        <%for(list of listings){%>
+            <a href="/listing/<%=list._id%>" class="showList">
+
+                <div class="card cardlisting col mb-5">
+                    <img src="<%= list.image.url%>" class="card-img-top" alt="...">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b><%=list.title%></b> <br>
+                            &#8377; <%= list.price.toLocaleString("en-IN") %>/night &nbsp; &nbsp; &nbsp; <span class="tax"> +18% GST</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+        <%}%>
+    </div>
+
+    <script src="/js/taxtoggler.js"></script>
+</body>

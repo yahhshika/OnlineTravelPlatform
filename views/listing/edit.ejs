@@ -1,0 +1,110 @@
+<% layout("layouts/boilerplate")%>
+<body>
+    <form action="/listing/<%= list._id%>?_method=PUT" method="post" class="mt-5 row needs-validation" novalidate enctype="multipart/form-data">
+        <h1 class="col-8 offset-2">Edit List:</h1>
+        <div class="col-8 offset-2">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" id="title" value="<%= list.title %>" class="form-control" required>
+                <div class="valid-feedback">
+                    Title Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Enter a valid value!
+                </div>
+
+            </div>
+    
+            <div class="mb-3">
+
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" id="description" class="form-control" required><%= list.description.trim() %></textarea>
+                <div class="valid-feedback">
+                    Description Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Enter a valid description!
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="imgpreview" class="form-label">Original Image Preview</label> <br>
+                <img src="<%= originalimg %>" alt="not found" id="imgpreview" class="rounded">
+            </div>
+            <div class="mb-3">
+                
+                <label for="image" class="form-label">New Image</label>
+                <input type="file" name="listing[image]" id="image" class="form-control">
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-4">
+
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" name="listing[price]" id="price" value="<%= list.price %>" class="form-control" required> 
+                    <div class="valid-feedback">
+                        Price Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Enter a valid value!
+                    </div>
+
+
+                </div>
+                <div class="col-md-8">
+
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" id="country" value="<%= list.country %>" class="form-control" required>  
+                    <div class="valid-feedback">
+                        Country Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Enter a valid value!
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="mb-3">
+                <% const allCategories = ["Trending", "Rooms", "IconicCity", "Camping", "Farms", "AmazingPools"] %>
+                <label for="form-check">SELECT YOUR CATEGORY</label> <br>
+                <div class="form-control" style="border: none;">
+                    <% for(cat of allCategories ){%>
+                        <input class="form-check-input" type="checkbox" value="<%= cat %>" id="<%= cat %>" name="listing[category]" 
+                        <%if(list.category && list.category.includes(cat)){%> 
+                            checked 
+                        <%}%>
+                        >
+                        <label class="form-check-label" for="<%= cat %>">
+                            <%=cat%>
+                        </label><br>
+                    <%}%>
+                </div>
+                
+            </div>
+
+            <div class="mb-5">
+
+                <label for="location" class="form-label">Location</label>
+                <input type="text" name="listing[location]" id="location" value="<%= list.location %>" class="form-control" required> 
+                <div class="valid-feedback">
+                    Location Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Enter a valid value!
+                </div>
+            </div>
+    
+            <div class="d-flex justify-content-between mb-5">
+
+                <button type="submit" class="btn btn-dark editlistingbtn">Submit</button>
+                <a href="/listing/<%=list._id%>" class="btn btn-dark backbutton"><i class="fa-solid fa-arrow-left"></i></a>
+
+            </div>
+    
+        </div>
+
+        
+    </form>
+    <!-- <script src="/js/script.js"></script> -->
+</body>
