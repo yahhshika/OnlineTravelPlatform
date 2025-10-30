@@ -94,11 +94,6 @@ http://localhost:8080
 
 ---
 
-This version includes:
-- Section dividers (`---`) for clarity  
-- Syntax highlighting for commands  
-- Proper subheadings (`###`) that render beautifully on GitHub  
-
 
 
 
