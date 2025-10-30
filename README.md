@@ -82,8 +82,23 @@ SESSION_SECRET=your_session_secret
 ```
 
 ### 4. Run the application
+```bash
+node app.js
+```
 
-npm start
+### 5. Open in browser
+http://localhost:8080
+
+## You’re now ready to use Online Travel Platform locally!
+
+
+---
+
+This version includes:
+- Section dividers (`---`) for clarity  
+- Syntax highlighting for commands  
+- Proper subheadings (`###`) that render beautifully on GitHub  
+
 
 
 
